@@ -28,7 +28,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://<your-ip>:5000/api/signup', {
+      const response = await fetch('https://zentroads.vercel.app/:5000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
