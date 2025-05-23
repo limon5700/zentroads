@@ -22,7 +22,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      // Use environment variable for backend URL
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+
+      const response = await fetch(`${backendUrl}/api/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
