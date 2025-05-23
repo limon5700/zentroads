@@ -35,7 +35,7 @@ const transporter = nodemailer.createTransport({
 const authMiddleware = async (req, res, next) => {
   try {
     const token = req.header('Authorization').replace('Bearer ', '');
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || '3cdm3hr6r0034JvLhAP3ZEWv6EbMpWsrQe1fAqLjyi62VX4HpgKGELUmWn4EkVPL');
     const user = await User.findOne({ _id: decoded.id });
 
     if (!user) {
