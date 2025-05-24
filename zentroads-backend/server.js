@@ -84,7 +84,7 @@ app.post('/api/signup', async (req, res) => {
     await user.save();
 
     // Send verification email
-    const verificationUrl = `http://localhost:3000/verify-email?token=${verificationToken}`;
+    const verificationUrl = `https://zentroads.vercel.app/verify-email?token=${verificationToken}`;
     await transporter.sendMail({
       to: email,
       subject: 'Verify your email',
