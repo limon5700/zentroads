@@ -84,16 +84,16 @@ app.post('/api/signup', async (req, res) => {
     await user.save();
 
     // Send verification email
-    const verificationUrl = `https://zentroads.vercel.app/verify-email?token=${verificationToken}`;
-    await transporter.sendMail({
-      to: email,
-      subject: 'Verify your email',
-      html: `
-        <h1>Email Verification</h1>
-        <p>Please click the link below to verify your email:</p>
-        <a href="${verificationUrl}">${verificationUrl}</a>
-      `
-    });
+    // const verificationUrl = `https://zentroads.vercel.app/verify-email?token=${verificationToken}`;
+    // await transporter.sendMail({
+    //   to: email,
+    //   subject: 'Verify your email',
+    //   html: `
+    //     <h1>Email Verification</h1>
+    //     <p>Please click the link below to verify your email:</p>
+    //     <a href="${verificationUrl}">${verificationUrl}</a>
+    //   `
+    // });
 
     // Generate JWT token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET || '3cdm3hr6r0034JvLhAP3ZEWv6EbMpWsrQe1fAqLjyi62VX4HpgKGELUmWn4EkVPL', {
