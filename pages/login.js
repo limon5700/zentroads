@@ -40,17 +40,17 @@ const Login = () => {
         return;
       }
 
-      // Store authentication data
-      localStorage.setItem('isAuthenticated', 'true');
-      localStorage.setItem('token', data.token);
+  //     // Store authentication data
+  //     localStorage.setItem('isAuthenticated', 'true');
+  //     localStorage.setItem('token', data.token);
       
-      // Redirect to profile page
-      router.push('/profile');
-    } catch (error) {
-      console.error('Login error:', error);
-      alert('An error occurred during login.');
-    }
-  };
+  //     // Redirect to profile page
+  //     router.push('/profile');
+  //   } catch (error) {
+  //     console.error('Login error:', error);
+  //     alert('An error occurred during login.');
+  //   }
+  // };
 
   const handleGoogleLogin = () => {
     // *** Handle Google Login Placeholder ***
